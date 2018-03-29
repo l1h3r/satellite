@@ -1,13 +1,16 @@
 defmodule <%= @project_name_camel_case %>.MixProject do
   use Mix.Project
 
+  @github ""
+
   def project do
     [
       app: :<%= @project_name %>,
       version: "0.1.0",
       elixir: "~> 1.6",
       name: "<%= @project_name %>",
-      source_url: "",
+      source_url: @github,
+      homepage_url: @github,
       package: package(),
       description: description(),
       start_permanent: Mix.env() == :prod,
@@ -36,7 +39,7 @@ defmodule <%= @project_name_camel_case %>.MixProject do
       files: ["lib", "mix.exs", "README.md", "LICENSE.md"],
       maintainers: [""],
       licenses: [""],
-      links: %{"Github" => ""}
+      links: %{"Github" => @github}
     ]
   end
 
