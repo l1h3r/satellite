@@ -16,7 +16,6 @@ defmodule <%= @project_name_camel_case %>.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       aliases: aliases(),
-      dialyzer: dialyzer(),
       test_coverage: [tool: ExCoveralls]
     ]
   end
@@ -55,12 +54,6 @@ defmodule <%= @project_name_camel_case %>.MixProject do
   defp aliases do
     [
       lint: ["dialyzer", "credo", "test"]
-    ]
-  end
-
-  defp dialyzer do
-    [
-      ignore_warnings: "dialyzer.ignore-warnings"
     ]
   end
 end
